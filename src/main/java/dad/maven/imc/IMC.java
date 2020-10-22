@@ -10,6 +10,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextInputControl;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -63,7 +64,7 @@ public class IMC extends Application {
 		
 		// Operaciones
 		
-		peso.textProperty().bindBidirectional(pesoB, new NumberStringConverter());
+		pesoB.textProperty().bind
 		altura.textProperty().bindBidirectional(alturaB, new NumberStringConverter());
 		
 		NumberBinding metros = alturaB.valueProperty().multiply(0.10);
