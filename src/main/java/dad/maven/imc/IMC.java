@@ -64,8 +64,16 @@ public class IMC extends Application {
 		
 		// Operaciones
 		
-		pesoB.textProperty().bind
+		String pesoC = peso.getText();
+		pesoB= DoubleProperty.(pesoC);
 		altura.textProperty().bindBidirectional(alturaB, new NumberStringConverter());
+		
+		pesoB.bind(
+				Bindings
+					.when(pesoB.isEmpty())
+					.then("No hay nadie a quien saludar")
+					.otherwise(Bindings.concat("¡Hola ", nombre, "!"))
+			);
 		
 		NumberBinding metros = alturaB.valueProperty().multiply(0.10);
 		
